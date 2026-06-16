@@ -1,28 +1,28 @@
-import type { Metadata } from 'next'
-import Navbar from '@/components/blocks/navbar'
-import FooterColumns from '@/components/blocks/footer-columns'
-import ContactForm from '@/components/blocks/contact-form'
-import ContactMap from '@/components/blocks/contact-map'
+import type { Metadata } from "next";
+import Navbar from "@/components/blocks/navbar";
+import ContactForm from "@/components/blocks/contact-form";
+import ContactMap from "@/components/blocks/contact-map";
+import FooterColumns from "@/components/blocks/footer-columns";
 
 export const metadata: Metadata = {
-  title: 'Contact | Harris Landscaping & Gardens',
+  title: "Contact Us | Harris Landscaping & Gardens",
   description:
-    "Ready to transform your outdoor space? Get in touch with Harris Landscaping & Gardens and we'll get back to you within one business day.",
-}
+    "Get in touch with Harris Landscaping & Gardens for a free, no-obligation quote. Call, email, or fill in our contact form and we'll get back to you within one business day.",
+};
 
-export default function Page() {
+export default function ContactPage() {
   return (
     <>
       <Navbar
         cta="Get a Free Quote"
         logo="Harris Landscaping & Gardens"
         links={[
-          { href: '/', label: 'Home' },
-          { href: '/about', label: 'About' },
-          { href: '/services', label: 'Services' },
-          { href: '/gallery', label: 'Gallery' },
-          { href: '/service-areas', label: 'Service Areas' },
-          { href: '/contact', label: 'Contact' },
+          { href: "/", label: "Home" },
+          { href: "/about", label: "About" },
+          { href: "/services", label: "Services" },
+          { href: "/gallery", label: "Gallery" },
+          { href: "/service-areas", label: "Service Areas" },
+          { href: "/contact", label: "Contact" },
         ]}
         ctaHref="/contact"
         logoHref="/"
@@ -46,31 +46,40 @@ export default function Page() {
         email="info@harrislandscaping.com.au"
         phone="02 XXXX XXXX"
         columns={[
-          { links: [
-            { href: '/services', label: 'Landscaping Design' },
-            { href: '/services', label: 'Paving' },
-            { href: '/services', label: 'Retaining Walls' },
-            { href: '/services', label: 'Artificial Turf' },
-            { href: '/services', label: 'Decking' },
-            { href: '/services', label: 'Garden Maintenance' },
-          ], heading: 'Services' },
-          { links: [
-            { href: '/service-areas/campbelltown', label: 'Campbelltown' },
-            { href: '/service-areas/camden', label: 'Camden' },
-            { href: '/service-areas/narellan', label: 'Narellan' },
-            { href: '/service-areas/picton', label: 'Picton' },
-            { href: '/service-areas/macarthur', label: 'Macarthur Region' },
-            { href: '/service-areas/wollondilly', label: 'Wollondilly' },
-          ], heading: 'Service Areas' },
-          { links: [
-            { href: '/about', label: 'About Us' },
-            { href: '/gallery', label: 'Gallery' },
-            { href: '/contact', label: 'Contact' },
-            { href: '/contact', label: 'Get a Free Quote' },
-          ], heading: 'Company' },
+          {
+            links: [
+              { href: "/services", label: "Landscaping Design" },
+              { href: "/services", label: "Paving" },
+              { href: "/services", label: "Retaining Walls" },
+              { href: "/services", label: "Artificial Turf" },
+              { href: "/services", label: "Decking" },
+              { href: "/services", label: "Garden Maintenance" },
+            ],
+            heading: "Services",
+          },
+          {
+            links: [
+              { href: "/service-areas/campbelltown", label: "Campbelltown" },
+              { href: "/service-areas/camden", label: "Camden" },
+              { href: "/service-areas/narellan", label: "Narellan" },
+              { href: "/service-areas/picton", label: "Picton" },
+              { href: "/service-areas/macarthur", label: "Macarthur Region" },
+              { href: "/service-areas/wollondilly", label: "Wollondilly" },
+            ],
+            heading: "Service Areas",
+          },
+          {
+            links: [
+              { href: "/about", label: "About Us" },
+              { href: "/gallery", label: "Gallery" },
+              { href: "/contact", label: "Contact" },
+              { href: "/contact", label: "Get a Free Quote" },
+            ],
+            heading: "Company",
+          },
         ]}
         copyright="© 2026 Harris Landscaping & Gardens. All rights reserved."
       />
     </>
-  )
+  );
 }
